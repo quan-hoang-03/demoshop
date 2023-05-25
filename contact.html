@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quân Hoàng website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/js.js">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script> 
+</head>
+<!-- <style>
+    section{
+        background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ), url("./assets/img/guarantee.jpg");
+        /*background:chartreuse;*/
+        background-size: cover;  
+        color: white;
+        font-size: 20px;
+    }
+    /* .our-service{
+        max-width: 1664px;
+    } */
+    .our-service .container{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 120px;
+    }
+    .our-service .container .service {
+        width: 33.3333333%;
+        padding: 0px 60px 30px 60px;
+        margin-top: 20px;
+        text-align: justify;
+        position: relative;
+    }
+    section h3{
+        padding-top: 120px;
+        padding-bottom: 50px;
+        font-size: 25px;
+        text-align: center;
+    }
+    section img{
+        width: 80px;
+    }
+    section h4{
+        font-size: 25px;
+        text-align: center; 
+    }
+    .our-service .container .service .content p{
+        line-height: 25px;
+        font-size: 20px;
+    }
+    .our-service .container .service .icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    .caption{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px 20px 100px 20px;
+    }
+    .caption .cap-1, .caption .cap-2{
+        width: 40%;
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .info{
+        padding: 0 30px;
+        border-top: 1px solid rgba(0,0,0,.05);
+        border-color: #dbc084;
+        font-size: 19px;
+        text-align: center;
+    }
+    .info .container{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+    .info .container .infomation .icon{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+    }
+    .info .container .infomation{
+        width: 20%;
+        padding: 20px;
+        line-height: 25px;
+        margin-top: 60px;
+    }
+    .info .container .infomation .icon img{
+        width: 90px;
+    }
+</style> -->
+<body>
+    <header class="header">
+        <div class="title__full-width">
+           <nav class="header__navbar" id="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar--separate">
+                        <a href="duan.html" class="header__navbar-item-link">Trang chủ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar--separate">
+                        <a href="sanpham.html" class="header__navbar-item-link">Sản phẩm</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar--separate">
+                        <a href="" class="header__navbar-item-link">Dịch vụ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar--separate">
+                        <a href="store.html" class="header__navbar-item-link">Đại lý & Cửa hàng</a>
+                    </li>
+                    <li class="header__navbar-item ">
+                        <a href="" class="header__navbar-item-link">
+                            Bộ sưu tập
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link header__navbar-icon-link">
+                            <i class="header__navbar-icon header__navbar-icon fa-regular fa-bell"></i>
+                        </a>
+                        Thông báo
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link header__navbar-icon-link">
+                            <i class="header__navbar-icon header__navbar-icon fa-regular fa-circle-question"></i>   
+                        </a>
+                        Trợ giúp
+
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong" id="modal_open">
+                        <a href="#">
+                            <i class="header__navbar-icon header__navbar-icon-link fa-solid fa-user " ></i>
+                        </a>
+                        Tài khoản
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header with search -->
+            <div class="header-with-search">
+                <div class="header__logo">
+                    <img src="https://stfe.woka.io/desktop/image/logo/fado_black_v2.svg" alt="" class="header__logo-img">
+                </div>
+
+                <div class="header__search">
+                    <div class="header__search-select">
+                        <span class="header__search-select-word">Hàng cao cấp</span>
+                    </div>
+                    <div class="header__search-input-wrap">
+                        <input type="text" class="header___search-input" placeholder="Nhập để tìm kiếm sản phẩm...">
+                        <!-- Search history -->
+                        <div class="header__search-history">
+                            <div class="header__search-history-icon">
+                                <i class="fa-solid fa-chart-line-up"></i>
+                            </div>
+                            <!-- <h3 class="header__search-history-heading">Từ khóa phổ biến</h3>
+                            <ul class="header__search-history-list">
+                                <li class="header__search-history-item">
+                                    
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    
+                    <button class="header__search-btn">
+                        <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <div class="header__cart">
+                    <i class="header__cart-icon fa-solid fa-bag-shopping"></i>
+                    <span class="header__cart-word">Giỏ hàng</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="contact">
+        <h3>Dịch vụ của chúng tôi</h3>
+        <div class="our-service">
+            <div class="container">
+                <div class="service">
+                    <div class="icon">
+                        <img src="./assets/img/maintenance.png">
+                    </div>
+                    <div class="content">
+                        <h4>Bảo dưỡng</h4>
+                        <p>Đối với các sản phẩm được mua tại hệ thống FADO, chúng tôi cung cấp dịch vụ bảo dưỡng bao gồm lau dầu, đánh bóng.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="icon">
+                        <img src="./assets/img/expertise.png">
+                    </div>
+                    <div class="content">
+                        <h4>Thẩm định đồng hồ</h4>
+                        <p>FADO mang đến dịch vụ định giá và thẩm định đồng hồ đáng tin cậy.</p>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="icon">
+                        <img src="./assets/img/order.png">
+                    </div>
+                    <div class="content">
+                        <h4>Đặt hàng theo yêu cầu</h4>
+                        <p>Với mạng lưới toàn cầu và mối quan hệ đối tác gần gũi với các hãng đồng hồ uy tín, FADO có thể tìm được cho khách hàng mọi mẫu đồng hồ như ý muốn, bao gồm cả những sản phẩm khó tìm và hiếm nhất.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="caption-contact">
+        <div class="cap-1">
+            1. Thời hạn bảo hành: <br>
+            Đồng hồ được bảo hành từ 1-10 năm kể từ ngày mua dựa trên quy định của hãng sản xuất<br>
+            <br>
+            2. Phạm vi tiếp nhận đồng hồ bảo hành và sửa chữa:<br>
+            Frodo tiếp nhận bảo hành và sửa chữa đối với tất cả các sản phẩm được mua tại hệ thống Frodo.<br>
+            Những sản phẩm mang thương hiệu mà Frodo là nhà phân phối độc quyền tại Việt Nam cũng sẽ tiếp nhận bảo hành và sửa chữa.<br>
+            Ngoài những trường hợp nêu trên, Frodo sẽ tiếp nhận đồng hồ để bảo hành hoặc sửa chữa cho quý khách hàng.<br>
+            <br>
+            3. Điều kiện để đồng hồ được bảo hành miễn phí và cách tính phí đối với đồng hồ sửa chữa:<br>
+            Trong trường hợp đồng hồ mua tại Frodo còn trong thời hạn bảo hành, khách hàng phải xuất trình những giấy tờ liên quan đến sản phẩm như sổ bảo hành hoặc hóa đơn mua hàng…,<br>
+            Khách hàng sẽ được bảo hành miễn phí theo như quy định của hãng sản xuất.<br>
+            Trong trường hợp đồng hồ hết thời hạn bảo hành hoặc Khách hàng không mang theo giấy tờ cần thiết liên quan đến sản phẩm, khách hàng sẽ mất phí sửa chữa.<br>
+            <br>
+            4. Phạm vi bảo hành đồng hồ:<br>
+            Frodo chỉ bảo hành các lỗi kỹ thuật về máy (như đồng hồ không chạy, chạy không chính xác), độ chịu nước và pin đồng hồ.<br>
+            Nếu đồng hồ gặp các vấn đề về lỗi kỹ thuật như đồng hồ không chạy hoặc chạy không chính xác, hơi nước trên mặt đồng hồ, dây hoặc vỏ đồng hồ bị bong tróc hoặc phai lớp mạ, các lỗi kỹ thuật khác bắt nguồn từ sản phẩm, Frodo sẽ trực tiếp kiểm tra và đổi mới sản phẩm cho Khách hàng nếu nghiêm trọng.<br>
+        </div>
+        <div class="cap-2">
+            5. Các trường hợp không nằm trong phạm vi bảo hành:
+            <ul>
+                <li>Các lỗi về vỏ và dây của đồng hồ như bong tróc hoặc phai lớp mại, ố mặt số…</li>
+                <li>Các lỗi rơi vỡ, va đập làm xước kính trong quá trình Khách hàng sử dụng gây ra. Dây da bị gẫy, nứt hoặc bong.</li>
+                <li>Không bảo hành cho trường hợp điều chỉnh, sử dụng không đúng cách của người dùng.</li>
+                <li>Không bảo hành cho đồng hồ đã sửa chữa tại những nơi không phải là trung tâm bảo hành của Frodo.</li>
+                <li>Trong thời gian sử dụng nếu gặp bất kỳ trục trặc nào Khách hàng có thể liên hệ trực tiếp với Trung tâm bảo hành của Hãng hoặc phòng CSKH để được trợ giúp theo số điện thoại: 09</li>
+            </ul>
+            Frodo cam kết bảo hành một cách trung thực nhất đảm bảo quyền lợi cho Quý khách, xin Quý khách vui lòng đọc kỹ các quy định bảo hành ghi ở mặt sau phiếu trước khi thực hiện bảo hành sản phẩm. <br>
+            Lưu ý:
+            <ul>
+                <li>Khách hàng chịu trách nhiệm cho chi phí vận chuyển đến Trung tâm bảo hành.</li>
+                <li>Hết thời hạn bảo hành, chi phí sửa chữa sẽ được trung tâm bảo hành hỗ trợ với giá ưu đãi nhất</li>
+            </ul>
+        </div>
+    </div>
+    <div class="info">
+        <div class="container">
+            <div class="infomation">
+                <div class="icon">
+                    <img src="./assets/img/guarantee-phone.jpg">
+                </div>
+                <div class="content">
+                    <p>096 999 99 90</p>
+                </div>
+            </div>
+            <div class="infomation" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd;">
+                <div class="icon">
+                    <img src="./assets/img/guarantee-address.png">
+                </div>
+                <div class="content">
+                    <p>01 Nguyễn Gia Thiều, Quận Hoàn Kiếm Hà Nội, Việt Nam</p>
+                </div>
+            </div>
+            <div class="infomation" style="border-right: 1px solid #ddd;">
+                <div class="icon">
+                    <img src="./assets/img/guarantee-address.png">
+                </div>
+                <div class="content">
+                    <p>81 Phan Kế Bính, phường Đa Kao, quận 1, Hồ Chí Minh</p>
+                </div>
+            </div>
+            <div class="infomation">
+                <div class="icon">
+                    <img src="./assets/img/guarantee-mail.png">
+                </div>
+                <div class="content">
+                    <p>info@frodos.com.vn</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer" style="padding: 0;margin: 0;">
+        <div class="footer-grid">
+            <div class="grid__row">
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Quan-Hoang Mall</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Giới thiệu</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Giới thiệu</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Điều khoản</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Danh mục</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Đồng hồ Nam</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Đồng hồ nữ</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Thương hiệu nổi bật</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Theo dõi</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="https://www.facebook.com/FadoVietnam" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>    
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.instagram.com/fado.vn/" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-square-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.youtube.com/c/Fadovn_Vietnam" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-youtube"></i>
+                                Youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>                           
+                        <div class="footer__download-apps">
+                            <a href="https://play.google.com/store/apps/details?id=vn.fado.android" class="footer__download-app-link">
+                                <img src="assets/img/google play.png" alt="Google play" class="footer__download-app-img">
+                            </a>
+                            <a href="https://apps.apple.com/vn/app/id1190022173" class="footer__download-app-link">
+                                <img src="assets/img/app store (1).png" alt="App store" class="footer__download-app-img">
+                            </a>
+
+                        </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer__bottom">
+            <div class="grid">
+                
+                    <p class="footer__text">Bản quyền thuộc về Quân Hoàng</p>
+                
+            </div>
+         </div>
+    </footer>
+</body>
+</html>

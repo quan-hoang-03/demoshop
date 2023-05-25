@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quân Hoàng website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.2.1-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/js.js">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+</head>
+<style>
+    .container{
+        height: 100%;
+        width: 70%;
+        line-height: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .warranty{
+        background-color: #e8e8e8;
+        width: 100%;
+        padding: 10px 0;
+    }
+    h1{
+        text-align: center;
+        font-size: 30px;
+    }
+    p{
+        font-size: 16px;
+    }
+    h2{
+        color: red;
+        font-size: 20px;
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="title__full-width">
+           <nav class="header__navbar" id="header__navbar">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar--separate">
+                        <a href="sanpham.html" class="header__navbar-item-link">Sản phẩm</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar--separate">
+                        <a href="" class="header__navbar-item-link">Dịch vụ</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar--separate">
+                        <a href="store.html" class="header__navbar-item-link">Đại lý & Cửa hàng</a>
+                    </li>
+                    <li class="header__navbar-item ">
+                        <a href="" class="header__navbar-item-link">
+                            Bộ sưu tập
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link header__navbar-icon-link">
+                            <i class="header__navbar-icon header__navbar-icon fa-regular fa-bell"></i>
+                        </a>
+                        Thông báo
+                    </li>
+                    <li class="header__navbar-item">
+                        <a href="" class="header__navbar-item-link header__navbar-icon-link">
+                            <i class="header__navbar-icon header__navbar-icon fa-regular fa-circle-question"></i>   
+                        </a>
+                        Trợ giúp
+
+                    </li>
+                    <li class="header__navbar-item header__navbar-item--strong" id="modal_open">
+                        <a href="#">
+                            <i class="header__navbar-icon header__navbar-icon-link fa-solid fa-user " ></i>
+                        </a>
+                        Tài khoản
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Header with search -->
+            <div class="header-with-search">
+                <div class="header__logo">
+                    <img src="https://stfe.woka.io/desktop/image/logo/fado_black_v2.svg" alt="" class="header__logo-img">
+                </div>
+
+                <div class="header__search">
+                    <div class="header__search-select">
+                        <span class="header__search-select-word">Hàng cao cấp</span>
+                    </div>
+                    <div class="header__search-input-wrap">
+                        <input type="text" class="header___search-input" placeholder="Nhập để tìm kiếm sản phẩm...">
+                        <!-- Search history -->
+                        <div class="header__search-history">
+                            <div class="header__search-history-icon">
+                                <i class="fa-solid fa-chart-line-up"></i>
+                            </div>
+                            <!-- <h3 class="header__search-history-heading">Từ khóa phổ biến</h3>
+                            <ul class="header__search-history-list">
+                                <li class="header__search-history-item">
+                                    
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    
+                    <button class="header__search-btn">
+                        <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <div class="header__cart">
+                    <i class="header__cart-icon fa-solid fa-bag-shopping"></i>
+                    <span class="header__cart-word">Giỏ hàng</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="warranty">
+        <div class="container">
+            <h1>CHÍNH SÁCH BẢO HÀNH</h1>
+            <p>Theo chính sách Bảo hành của các hãng đồng hồ, tất cả các đồng hồ Chính hãng khi bán ra đều kèm theo một THẺ hoặc SỔ BẢO HÀNH toàn cầu có giá trị bảo hành trong thời gian theo quy định của từng hãng đồng hồ khác nhau. Mỗi THẺ hoặc SỔ BẢO HÀNH chỉ được phát hành kèm theo mỗi chiếc đồng hồ được bán ra một lần duy nhất và không cấp lại dưới bất kỳ hình thức nào.</p>
+            <h2>BẢO HÀNH</h2>
+            <p>1. Bảo hành chỉ có giá trị khi đồng hồ có THẺ hoặc SỔ BẢO HÀNH chính thức đi kèm, THẺ hoặc SỔ BẢO HÀNH được ghi đầy đủ và chính xác các thông tin như: mã số đồng hồ, mã đáy của đồng hồ (nếu có), nơi bán, ngày mua hàng. THẺ hoặc SỔ BẢO HÀNH phải được đóng dấu của Đại lý ủy quyền chính thức hoặc Cửa hàng bán ra và còn trong thời hạn bảo hành theo qui định của từng hãng đồng hồ.</p>
+            <p>2. Thời gian bảo hành được tính từ ngày mua được ghi trên THẺ hoặc SỔ BẢO HÀNH và không được gia hạn sau khi hết thời hạn bảo hành theo qui định của mỗi hãng đồng hồ, theo tiêu chuẩn chung thời gian bảo hành của đồng hồ thường là 24 tháng (02 năm), ngoại trừ có các cam kết đặc biệt khác.</p>
+            <p>3. Chỉ bảo hành miễn phí cho các hư hỏng về máy và các linh kiện bên trong của đồng hồ được xác định là do lỗi của nhà sản xuất.</p>
+            <p>4. Chỉ bảo hành thay thế mới cho những linh kiện bên trong của đồng hồ, không thay thế hoặc đổi bằng một chiếc Đồng hồ khác.</p>
+            <p>5. Tại hệ thống ĐỒNG HỒ TỐT Pin của đồng hồ được bảo hành và thay thế miễn phí không hạn chế thời gian. Ngoại trừ Pin của đồng hồ dòng Thể thao có chức năng đo thời gian (Chronograph) và đồng hồ có đèn soi mặt số (Loomi), đồng hồ sử dụng Pin năng lượng từ ánh sáng (Eco-Drive) sẽ áp dụng theo các chính sách bảo hành kèm theo.</p>
+            <h2>KHÔNG BẢO HÀNH</h2>
+            <p>1. Không bảo hành về tuổi thọ Pin của đồng hồ dòng Thể thao có chức năng đo thời gian (Chronograph) và đồng hồ có đèn soi mặt số (Loomi), đồng hồ sử dụng Pin năng lượng từ ánh sáng (Eco-Drive) sẽ áp dụng theo các chính sách bảo hành kèm theo.</p>
+            <p>2. Không bảo hành Dây da "Quai đeo da" của đồng hồ bao gồm tất cả các loại chất liệu da.</p>
+            <p>3. Không bảo hành cho những hao mòn thông thường theo thời gian và lão hóa do quá trình sử dụng đối với vỏ máy, dây đeo của đồng hồ bao gồm dây kim loại và dây da (Ví dụ: vỏ máy móp méo, vết hằn, trầy xước, sờn, phai màu, bong tróc lớp mạ, nứt vỡ mặt kính, khóa, dây...) trừ trường hợp lỗi kỹ thuật do nhà sản xuất thông báo.</p>
+            <p>4. Không bảo hành cho những hậu quả gián tiếp của việc sử dụng không đúng cách của người sử dụng như: đeo đồng hồ trong khi xông hơi, tắm nước nóng, để đồng hồ tiếp xúc với các loại hóa chất, axít, chất tẩy rửa có độ ăn mòn cao…</p>
+            <p>5. Không bảo hành cho những đồng hồ đã bị sửa chữa tại những nơi không phải là trung tâm bảo hành được các hãng đồng hồ ủy quyền chính thức hoặc Khách hàng tự ý sửa chữa.</p>
+            <p>6. Không bảo hành cho đồng hồ bị hư hỏng do ảnh hưởng của thiên tai, hỏa hoạn, lũ lụt, tai nạn hoặc cố tình gây hư hỏng…</p>
+            <h2>MẤT THẺ BẢO HÀNH</h2>
+            <p>+ Trong trường hợp mất THẺ hoặc SỔ BẢO HÀNH vui lòng liên hệ ngay với chúng tôi để được hỗ trợ. Chúng tôi chỉ hỗ trợ những THẺ hoặc SỔ BẢO HÀNH vẫn còn giá trị trong thời hạn bảo hành theo qui định nhưng bị mất, không áp dụng với THẺ hoặc SỔ BẢO HÀNH đã hết thời hạn bảo hành.</p>
+            <p>+ Nếu đồng hồ của Quý khách đã hết hạn bảo hành theo tiêu chuẩn, Quý khách có nhu cầu sửa chữa, bảo dưỡng, thay thế linh kiện chúng tôi sẽ báo giá chi phí cụ thể với mức ưu đãi tốt nhất.</p>
+            <h2>LƯU Ý QUAN TRỌNG:</h2>
+            <p>+ Đồng hồ khi báo gần hết Pin hoặc vừa hết Pin nên được thay pin mới ngay lập tức để giảm thiểu rủi ro của việc rò rỉ gây nguy hại đối với bộ máy đồng hồ. Chúng tôi khuyến cáo khách hàng nên liên hệ với Trung Tâm Bảo Hành của ĐỒNG HỒ TỐT để thay Pin với kỹ thuật và dụng cụ chuyên nghiệp cùng các dịch vụ kiểm tra cần thiết khi mở máy. Pin cũ nên được thu hồi tập trung xử lý riêng hoặc tái chế để bảo vệ môi trường.</p>
+            <p>+ Các nhà sản xuất đồng hồ cũng có các khuyến cáo như sau: Không nên để đồng hồ gần nơi có từ trường mạnh; Tránh những nơi có nhiệt độ cao và thay đổi đột ngột; Luôn rửa lại đồng hồ bằng nước sạch sau khi tắm biển; Tránh tiếp xúc chất tẩy rửa, hóa chất, nước hoa, xịt tóc…; Dây da nên tránh bị ngấm nước và phơi nắng lâu; Đồng hồ phủ lớp mạ PVD không nên đánh bóng, chùi rửa mà chỉ lau bằng khăn lau chuyên dụng. Đối với đồng hồ sử dụng bộ máy cơ tự động (Automatic), đồng hồ sử dụng Pin (Quartz) hoặc đồng hồ lên dây cót (Handwinding Movement), thì việc chỉnh giờ, chỉnh lịch hay lên dây cót nên tránh thực hiện trong khoảng thời gian từ 21h00 - 03h00 hàng ngày. Bởi nếu thực hiện các thao tác trên trong khoảng thời gian này sẽ gây hư hại ngoài ý muốn cho hệ thống bánh xe của đồng hồ; Thường xuyên lên dây phụ cho đồng hồ tự động để máy chạy chính xác. Vui lòng tham khảo thêm trong Sách hướng dẫn sử dụng được kèm theo khi mua đồng hồ.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="grid__row">
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Quan-Hoang Mall</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Giới thiệu</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Giới thiệu</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Tuyển dụng</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Điều khoản</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Danh mục</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Đồng hồ Nam</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Đồng hồ nữ</a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="" class="footer-item__link">Thương hiệu nổi bật</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Theo dõi</h3>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="https://www.facebook.com/FadoVietnam" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>    
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.instagram.com/fado.vn/" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-square-instagram"></i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.youtube.com/c/Fadovn_Vietnam" class="footer-item__link">
+                                <i class="footer-item__icon fa-brands fa-youtube"></i>
+                                Youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>                           
+                        <div class="footer__download-apps">
+                            <a href="https://play.google.com/store/apps/details?id=vn.fado.android" class="footer__download-app-link">
+                                <img src="assets/img/google play.png" alt="Google play" class="footer__download-app-img">
+                            </a>
+                            <a href="https://apps.apple.com/vn/app/id1190022173" class="footer__download-app-link">
+                                <img src="assets/img/app store (1).png" alt="App store" class="footer__download-app-img">
+                            </a>
+
+                        </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer__bottom">
+            <div class="grid">
+                
+                    <p class="footer__text">Bản quyền thuộc về Quân Hoàng</p>
+                
+            </div>
+         </div>
+    </footer>
+</body>
+</html>
