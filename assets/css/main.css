@@ -15,7 +15,19 @@
 }
 /* header javascript */
 .header__navbar.sticky{
-    background: rgba(225, 225,225,1);
+    position:fixed;
+	top:0;
+	left:0;
+	width:100%;	
+    background-color: #1e1e1e;
+    z-index: 3;
+    display: flex;
+}
+.header-with-search.after{
+    margin-top: 36px;
+}
+.header.after{
+    height: 136px;
 }
 
 .header__navbar-list{

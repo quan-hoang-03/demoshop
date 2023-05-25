@@ -13,14 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <!-- jquerry cho phan col2 -->
-<script>
-    $(()=>{
-        $('p img').click(function(){
-            let imPath = $(this).attr('src');
-            $('#main-img3').attr('src',imPath);
-        })
-    })
-</script>
+
 <body>
     <div class="app">
         <header class="header">
@@ -480,6 +473,27 @@
                         </div>
                     </div>
                 </div>
+                <div class="cart-product">
+                    <i class="fa-solid fa-circle-xmark"></i>
+                    <h2>GIỎ HÀNG</h2>
+                    <form action="">
+                        <table>
+                            <thead>
+                                <th>Sản Phẩm</th>
+                                <th>Giá</th>
+                                <th>Số Lượng</th>
+                                <th>Chọn</th>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                        <div style="text-align: right;" class="tongtien">
+                            <p style="font-weight: bold;">Tổng Tiền:<span>0</span><sup>VNĐ</sup></p>
+                        </div>
+                        <button><a href="#" class="cart-product-buy">Đặt Hàng</a></button>
+                    </form>
+                </div>
         <!-- footer -->
         <footer class="footer">
             <div class="footer-grid">
@@ -588,5 +602,6 @@
         }
         setInterval(changeImage,2000);
     </script>
+        <script src="assets/css/cart.js"></script>
 </body>
 </html>

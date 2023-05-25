@@ -702,66 +702,7 @@ i.home-product-item__like-icon-fill{
 }
 
 /* bill-main */
-/* .bill__main-mid{
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-.mid-top{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    text-transform: uppercase;
-}
-.titleL:before {
-    content: "";
-    position: absolute;
-    width: 65px;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-bottom: solid 1px #333;
-    margin-top: 8px;
-    left: 40%;
-}
-.titleL:after {
-    content: "";
-    position: absolute;
-    width: 65px;
-    right: 40%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    border-bottom: solid 1px #333;
-    margin-top: -20px;
-}
-.mid-content{
-    margin-top: 60px;
-}
-table.mid-addcart {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    font-weight: 300;
-}
-table.mid-addcart thead tr td {
-    padding: 5px;
-    color: #333;
-    font-weight: 600;
-    padding: 20px;
-    background: #f6f6f6;
-    text-transform: uppercase;
-}
-table.mid-addcart thead tr td:first-child, table.mid-addcart tbody tr td:first-child {
-    text-align: left;
-}
-table.mid-addcart thead tr td:last-child, table.mid-addcart tbody tr td:last-child {
-    border-right: none;
-} */
+
 .cart-product{
     color: #ddd;
     width: 50%;
@@ -799,6 +740,7 @@ table.mid-addcart thead tr td:last-child, table.mid-addcart tbody tr td:last-chi
     overflow-y: scroll;
     right: -100%;
     transition: all 0.3s ease;
+    font-size: 14px;
 }
 .cart-product button{
     margin-top: 12px;
@@ -808,6 +750,12 @@ table.mid-addcart thead tr td:last-child, table.mid-addcart tbody tr td:last-chi
     border: none;
     border-radius: 5px;
     background-color: tomato;
+    font-size: 14px;
+    text-decoration: none;
+}
+.cart-product-buy{
+    text-decoration: none;
+    color: #fff;
 }
 .cart-product-icon i{
     cursor: pointer;

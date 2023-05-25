@@ -1,41 +1,41 @@
-// $(document).ready(function() {
-//     var cartCountValue = 0;
-//     var cartCount = $('.header__cart .quality');
-//     $(cartCount).text(cartCountValue);
+$(document).ready(function() {
+    var cartCountValue = 0;
+    var cartCount = $('.header__cart .quality');
+    $(cartCount).text(cartCountValue);
   
-//     $('.btn-add').on('click', function(){
-//       var cartBtn = this;
-//       var cartCountPosition = $(cartCount).offset();
-//       var btnPosition = $(this).offset();
-//       var leftPos = 
-//       cartCountPosition.left < btnPosition.left
-//       ? btnPosition.left - (btnPosition.left - cartCountPosition.left)
-//       : cartCountPosition.left;
+    $('.btn-add').on('click', function(){
+      var cartBtn = this;
+      var cartCountPosition = $(cartCount).offset();
+      var btnPosition = $(this).offset();
+      var leftPos = 
+      cartCountPosition.left < btnPosition.left
+      ? btnPosition.left - (btnPosition.left - cartCountPosition.left)
+      : cartCountPosition.left;
       
-//     var topPos =
-//       cartCountPosition.top < btnPosition.top
-//       ? cartCountPosition.top
-//       : cartCountPosition.top
-//       $(cartBtn)
-//       .append("<span class='quality'>1</span>");
-//       $(cartBtn).find(".quality").each(function (i,count){
-//          $(quality).offset({
-//           left: leftPos,
-//           top: topPos
-//          })
-//          .animate({
-//           opcity : 0
-//          },
-//          800,
-//          function(){
-//           $this.remove();
-//           cartCountValue++;
-//           $(cartCount).text(cartCountValue);
-//          }
-//          );
-//       });
-//     });
-//   });
+    var topPos =
+      cartCountPosition.top < btnPosition.top
+      ? cartCountPosition.top
+      : cartCountPosition.top
+      $(cartBtn)
+      .append("<span class='quality'>1</span>");
+      $(cartBtn).find(".quality").each(function (i,count){
+         $(quality).offset({
+          left: leftPos,
+          top: topPos
+         })
+         .animate({
+          opcity : 0
+         },
+         800,
+         function(){
+          $this.remove();
+          cartCountValue++;
+          $(cartCount).text(cartCountValue);
+         }
+         );
+      });
+    });
+  });
 
 // let count = 0;
 // const counter = document.getElementById('counter');
@@ -51,31 +51,37 @@
 //   ,0)
 // })
 
-const btn = document.querySelector("button")
-btn.forEach(function(button,index){
+const button = document.querySelector(".btn-add")
+const btn = Array.from(button);
+btn.forEach(function(button,index) {
   button.addEventListener('click', function(event){
     var btnItem = event.target
     var product = btnItem.parentElement
-    var productImg = product.querySelector(".slide-img").src
+    var productImg = product.querySelector("#main-img2").src
     var productName = product.querySelector(".cart__container--product-title").innerText
-    var productPrice = product.querySelector(".red").innerText
+    var productPrice = product.querySelector(".price span").innerText
     addcart(productImg, productName, productPrice)
 })
+
 })
+
 function addcart(productImg,productName,productPrice){
   var addtr = document.createElement("tr")
   var cartItem = document.querySelectorAll("tbody tr")
   alert("Đã thêm sản phẩm vào trong giỏ")
-  for(var i=0; i< cartItem.length; i++){
+  for(var i=0; i < cartItem.length; i++){
       var producttronggio = document.querySelectorAll(".tensp")
       if(producttronggio[i].innerHTML==productName){
           alert("sản phảm đã có trong giỏ!")
           return
       }
   }
+  // trcontent la bien chua table la khi an vao them gio hang nó se hien ra day du thong tin trong table cua minh
   var trcontent = '<tr><td style="display: flex; align-items: center;"><img style="width: 70px;" src="'+productImg+'"><span class="tensp">'+productName+'</span></td><td><p><span class="giatien">'+productPrice+'</span> <sup>VND</sup></p></td><td><input style="width: 30px; outline: none; color: #000;" type="number" value="1" min="0"></td><td style="cursor: pointer;"><span class="xoa">Xóa</span></td></tr>'
+  //để trả về mã html bên trong phần tử nghĩa là nó dịch từ dữ liệu ra thành chữ cho mình
   addtr.innerHTML = trcontent
   var cartTable = document.querySelector("tbody")
+  //append là một phương thức dùng để thêm nội dung vào vị trí cuối của phần tử nghĩa là cartTable sẽ đc thêm vào sau addcart
   cartTable.append(addtr)
   carttotal()
   xoa()
@@ -119,10 +125,10 @@ function soluongthaydoi(){
   }
 }
 const cartbtn = document.querySelector(".fa-circle-xmark")
-const cartshow = document.querySelector(".fa-shopping-cart")
+const cartshow = document.querySelector(".header__cart-word")
 cartshow.addEventListener("click",function(){
-    document.querySelector(".cart").style.right ="0"
+    document.querySelector(".cart-product").style.right ="0"
 })
 cartbtn.addEventListener("click",function(){
-    document.querySelector(".cart").style.right ="-100%"
+    document.querySelector(".cart-product").style.right ="-100%"
 })
